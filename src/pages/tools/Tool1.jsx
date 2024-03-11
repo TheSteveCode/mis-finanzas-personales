@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'; // Asumiendo que estás utilizando Reac
 
 function Tool1() {
   const [total, setTotal] = useState(0);
-  const [msm, setMsm] = useState("")
 
   const calculateTotal = () => {
     const cash = parseFloat(document.querySelector(".cash").value) || 0;
@@ -34,34 +33,34 @@ function Tool1() {
       <div className="w3-row w3-center w3-margin w3-padding-24">
       <h2>Calcular Patrimonio Neto</h2>
 
-      
+      <marquee className="w3-blue"><p><em>...Conoce realmente con cuanto patrimonio cuentas...</em></p></marquee>
       <div className="w3-mobile w3-containe w3-left w3-padding-16">
       <h3>Suma de tus activos</h3>
       <p>Dinero en efectivo:</p>
-      <input className="cash" type="number" />
+      <input className="cash" type="number" placeholder="requerido*"/>
 
       <p>Dinero en Bancos:</p>
-      <input className="banks" type="number" />
+      <input className="banks" type="number" placeholder="requerido*" />
 
       <p>Dinero Ahorrado:</p>
-      <input className="wallet" type="number" />
+      <input className="wallet" type="number" placeholder="requerido*" />
 
       <p>Valor total de tus propiedades:</p>
-      <input className="properties" type="number" />
+      <input className="properties" type="number" placeholder="requerido*" />
 
       <p>Otros:</p>
-      <input className="others" type="number" />
+      <input className="others" type="number" placeholder="requerido*" />
       </div>
       <div className="w3-mobile w3-containe w3-right w3-padding-16">
       <h3>Resta los pasivos</h3>
       <p>Total tarjetas de crédito por pagar:</p>
-      <input className="creditCards" type="number" />
+      <input className="creditCards" type="number" placeholder="requerido*" />
       <p>Facturas de servicios por pagar:</p>
-      <input className="invoices" type="number" />
+      <input className="invoices" type="number" placeholder="requerido*" />
       <p>Prestamos por pagar:</p>
-      <input className="loans" type="number" />
+      <input className="loans" type="number" placeholder="requerido*" />
       </div>
-      <button type="button" onClick={updateTotal}>Calcular</button>
+      <button className="w3-green" type="button" onClick={updateTotal}>Calcular</button>
       
       <p><em>Tu Patrimonio Neto es: <strong>${total}</strong> CO</em></p>
       <p className="msm"></p>
